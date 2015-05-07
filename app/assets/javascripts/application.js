@@ -16,18 +16,14 @@
 //= require_tree .
 
 
-$(document).ready(function() {
-  
-  $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
-      // console.log($(window).scrollTop())
-    if ($(window).scrollTop() > 100) {
-      $('#nav-bar').addClass('.navbar-fixed');
-    }
-    if ($(window).scrollTop() < 100) {
-      $('#nav_bar').removeClass('.navbar-fixed');
-    }
+$(document).ready(function(){
+     $(window).bind('scroll', function() {
+     var navHeight = $( window ).height() - 60;
+       if ($(window).scrollTop() > navHeight) {
+         $('nav').addClass('fixed');
+       }
+       else {
+         $('nav').removeClass('fixed');
+       }
+    });
   });
-});
