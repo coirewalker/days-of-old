@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>OldNy3</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Days of Old: Remembering NYC</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
 
-<%= yield %>
+			<header>
+				<h1>Days of Old</h1>
+				<h5>remembering New York City</h5>	
+			</header>
+			
+			<nav>
+				<div id="nav-bar">
+					<ul>
+						<li>
+						<%= link_to 'Home', root_path %>
+						</li>
+						<li>
+						<%= link_to 'About', about_path %>
+						</li>
+					</ul>
+				</div>
+			</nav>
 
-</body>
+			<div class="main">	
+			
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+				</p>
+			</div>
+
+			<footer>
+				<img class="footer_logo" src="../footer_logo.png">
+			</footer>
+
+	<%= yield %>
+
+	</body>
 </html>

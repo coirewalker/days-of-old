@@ -8,7 +8,7 @@ class SessionController < ApplicationController
   	if @user and @user.password == params[:password]
   		session[:user_id] = @user.user_id
   		flash[:notice] = "Thanks for logging in!"
-  		redirect to @user
+  		redirect_to @user
   	else 
   		flash[:alert] = "You password is incorrect."
   		render :new
