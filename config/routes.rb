@@ -1,23 +1,14 @@
 Rails.application.routes.draw do
-  get 'users/index'
 
-  get 'users/new'
+  root 'home#index'
 
-  get 'users/show'
+  get 'session/new'
 
-  get 'users/edit'
-
-  get 'home/index'
-
-  get 'home/about'
-
-
+  get '/about', to: "home#about"
+  
   resources :users
   resources :articles do 
     resources :comments, shallow: true, only: [:create, :destroy]
   end
 
-  
-
-  
 end
