@@ -6,9 +6,23 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+	<body>
+		<header>
+			<h3> Historical Hidden Gems</h3>
+			<nav>
+				<ul>
+					<li><%= link to 'index', root_path %></li>
+					<li><%= link_to 'about', 'about_path' %></li>
+					<li><%= link_to 'users', 'users_path' %></li>
+				</ul>
+			</nav>
 
-<%= yield %>
+		</header>
+		
+		<main>
+			<%= flash[:notice] if flash[:notice] %>
+			<%= yield %>
+		</main>
 
-</body>
+	</body>
 </html>
