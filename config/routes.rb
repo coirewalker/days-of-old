@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :articles do 
-    resources :comments, shallow: true, only: [:create, :destroy]
+  resources :comments, shallow: true, only: [:create, :destroy]
   end
 
 end

@@ -1,28 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>OldNy3</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+	<head>
+	  <title>Days of Old: Remembering NYC</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
 	<body>
-		<header>
-			<h3> Historical Hidden Gems</h3>
-			<nav>
+		<section id="screen1">
+			<header>
+				<h1>Days of Old</h1>
+				<h5>remembering New York City</h5>	
+			</header>
+ 			<nav>
 				<ul>
-					<li><%= link to 'index', root_path %></li>
-					<li><%= link_to 'about', 'about_path' %></li>
-					<li><%= link_to 'users', 'users_path' %></li>
+					<li><%= link_to 'Home', root_path %>
+					</li>
+					<li><%= link_to 'About', about_path %>
+					</li>
 				</ul>
 			</nav>
+		</section>
+		<section id="screen2">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>				
+		</section>
 
-		</header>
-		
-		<main>
-			<%= flash[:notice] if flash[:notice] %>
-			<%= yield %>
-		</main>
+		<section id="screen3">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+			</p>
+		</section>
+
+	<footer>
+	</footer>
+
+	<%= yield %>
 
 	</body>
 </html>
