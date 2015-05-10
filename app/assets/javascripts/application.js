@@ -16,7 +16,7 @@
 //= require_tree .
 
 
-$(document).ready(function(){
+ $(document).ready(function(){
      $(window).bind('scroll', function() {
      var navHeight = $( window ).height() - 60;
        if ($(window).scrollTop() > navHeight) {

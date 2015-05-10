@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-  	@users = User.all
+  	@users = User.all #ref to User model class
   end
 
   def new
@@ -16,7 +16,6 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   	@user.destroy
   	flash[:alert] = "User has been deleted"
-  	redirect to users_path
-  	
+  	redirect to users_path	
   end
 end

@@ -8,6 +8,5 @@ class HomeController < ApplicationController
   	@user = User.all 
   	@message = "the about page rocks!"
   end
-
   
 end
