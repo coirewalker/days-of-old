@@ -1,2 +1,14 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<%= form_for(@article) do |f| %>
+  <ul>
+  <% @article.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :post %><br />
+    <%= f.text_field :post %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

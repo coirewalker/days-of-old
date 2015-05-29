@@ -1,0 +1,4 @@
+div class="comment <%= cycle("light", "dark") %>">
+	<p><%= comment.post %></p>
+	<span class="detail">by <%= comment.user.name %> <%= time_ago_in_words(comment.created_at) %> ago</span>
+</div>
