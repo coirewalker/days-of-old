@@ -1,2 +1,20 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<h1><%= @article.post %></h1>
+<p><%=@article.post %></p>
+
+<hr>
+<section id="comments-container">
+	<h4>Comments</h4>
+	<% @article.comments.each do |comment| %>
+		<%= render partial: 'comments/comment', object: comment %>
+	<% end %>
+</section>
+
+<% if current_user %> 
+	<h5>Post a comment below</h5>
+	<%= form_for [@article, @comment], remote: true do |f| %>
+		<%= f.text_area :body %><br>
+		<%= f.submit %>
+	<% end %>
+<% else %>
+	<h5><%= link_to 'Login', login_path %> to comment!</h5>
+<% end%>

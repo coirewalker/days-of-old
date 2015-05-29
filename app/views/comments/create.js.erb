@@ -1,0 +1,6 @@
+$('#comment_body').val('');
+var lastComment = $('.comment').last().attr('class');
+$('#comments-container').append("<%= j render partial: 'comment', object: @comment %>");
+if (lastComment.indexOf("dark") === -1) {
+	$('.comment').last().attr('class', 'comment dark');
+}

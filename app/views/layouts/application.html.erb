@@ -1,54 +1,44 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>Days of Old: Remembering NYC</title>
+	  <title> African Blog</title>
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	  <%= csrf_meta_tags %>
 	</head>
 	<body>
+
 		<section id="screen1">
 			<header>
 				<h1>Days of Old</h1>
-				<h5>remembering New York City</h5>	
+				<h5> Hello <%= current_user.name if current_user %></h5>	
 			</header>
  			<nav>
 				<ul>
-					<li><%= link_to 'Home', root_path %>
-					</li>
-					<li><%= link_to 'About', about_path %>
-					</li>
+					<li><%= link_to 'Home', root_path %></li>
+					<li><%= link_to 'About', about_path %></li>
+					<li><%= link_to 'users', users_path %></li>
+					<% if current_user %>
+					<li><%= link_to 'logout', logout,method: :delete %></li>
+					<% else %>
+
+					<li><%= link_to 'sign up', new_user_path %></li>
+					<li><%= link_to 'login', login_path %></li>
+					
+
+					<% end %>
+					
+
 				</ul>
 			</nav>
 		</section>
 		<section id="screen2">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>				
-		</section>
+			
+		
 
 		<section id="screen3">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-			</p>
+		</section>
+		
 		</section>
 
 	<footer>
