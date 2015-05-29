@@ -1,17 +1,19 @@
 class UsersController < ApplicationController
+  
   before_action :set_user, only:[:show, :edit, :update, :destroy]
+  
   def index
-  	@users = User.all
+  	@users = User.all #ref to User model class  
   end
 
   def new
     @user = User.new
   end
+  
   def create
     @user = User.create(user_params)
-    # Flash[:notice] = "New account created"
+    # flash[:notice] = "New account created"
     redirect_to users_path(@user)
-
   end
 
   def show
@@ -27,6 +29,7 @@ class UsersController < ApplicationController
     # flash[:notice] = "profile updated"
     redirect_to users_path(@user)  
   end
+  
   def destroy
   	@user.destroy
   	# flash[:alert] = "User has been deleted"
@@ -34,12 +37,13 @@ class UsersController < ApplicationController
   end
 
   private
-  def set_user
-    @user = User.find(params[:id])
 
+    def set_user
+      @user = User.find(params[:id])
     end
+    
     def user_params
-      params.require(:user).permit(:name, :email, :password)
-      
-     end
+      params.require(:user).permit(:name, :email, :password)      
+    end
+
 end
