@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  post: MyString
-  user_id: 1
+  edit: MyString
+  index: MyString
+  new: MyString
+  show: MyString
 
 two:
-  post: MyString
-  user_id: 1
+  edit: MyString
+  index: MyString
+  new: MyString
+  show: MyString

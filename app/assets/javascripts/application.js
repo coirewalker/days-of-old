@@ -16,18 +16,89 @@
 //= require_tree .
 
 
-$(document).ready(function() {
-  
-  $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
-      // console.log($(window).scrollTop())
-    if ($(window).scrollTop() > 100) {
-      $('#nav-bar').addClass('.navbar-fixed');
+ $(document).ready(function(){
+
+  $(window).bind('scroll', function() {
+  var navHeight = $(window).height() - 50;
+    if ($(window).scrollTop() > navHeight) {
+      $('nav').addClass('fixed');
     }
-    if ($(window).scrollTop() < 100) {
-      $('#nav_bar').removeClass('.navbar-fixed');
+    else {
+      $('nav').removeClass('fixed');
     }
   });
+
+
+var $navFade = $('.nav-wp-down');
+
+  $navFade.waypoint(function (direction) {
+    console.log('nav waypoint-down!');
+    if (direction == 'down') {
+      $('nav').addClass('fade-out');
+    }
+    else {
+      // $('nav').removeClass('fade-out');
+      $('nav').addClass('fade-in');
+    }
+
+  });
+
+
+///
+
+// function getScrollXY() {
+//     var x = 0, y = 0;
+//     if( typeof( window.pageYOffset ) == 'number' ) {
+//         // Netscape
+//         x = window.pageXOffset;
+//         y = window.pageYOffset;
+//     } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
+//         // DOM
+//         x = document.body.scrollLeft;
+//         y = document.body.scrollTop;
+//     } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
+//         // IE6 standards compliant mode
+//         x = document.documentElement.scrollLeft;
+//         y = document.documentElement.scrollTop;
+//     }
+//     return [x, y];
+// }
+
+
+
+////
+
+
+  var $footBlock = $('.stop-here');
+
+  $footBlock.waypoint(function (direction) {
+  	console.log('waypoint!');
+    if (direction == 'down') {
+  	  $('footer').addClass('stick');
+    }
+    else {
+      $('footer').removeClass('stick');
+    }
+  }, { offset: '65%' });
+
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

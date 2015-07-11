@@ -1,64 +1,164 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>Days of Old: Remembering NYC</title>
+	  <title>One Point Four: a travel photography blog</title>
+	  <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,800,400' rel='stylesheet' type='text/css'>
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	  <%= csrf_meta_tags %>
-	</head>
-	<body>
 
+	  <meta name="viewport" content="width=device-width">
+	</head>
+	<body >
+		<section id="screen1" class="bg">
 			<header>
-				<h1>Days of Old</h1>
-				<h5>remembering New York City</h5>	
-			</header>
-			
-			<nav>
-				<div id="nav-bar">
+				<div class=logo>
 					<ul>
-						<li>
-						<%= link_to 'Home', root_path %>
+						<li><h1>1.4</h1>
 						</li>
-						<li>
-						<%= link_to 'About', about_path %>
+						<li><h5>one point four</h5>
 						</li>
 					</ul>
 				</div>
+				<div class="slogan">
+					<ul>
+						<li>
+							<h5>a travel photography blog</h5>	
+						</li>
+						<%= link_to "follow", '/', id: 'follow', remote: true, confirm: "Are you sure you want to say hello?" %> 
+					</ul>
+				</div>
+			</header>
+ 			<nav>
+				<ul>
+					<li><%= link_to 'HOME', root_path %>
+					</li>
+					<li><%= link_to 'ABOUT', about_path %>
+					</li>
+					<li><%= link_to 'LOGIN', login_path %>
+					</li>
+					<li><%= link_to 'SIGNUP', new_user_path %>
+					</li>
+				</ul>
 			</nav>
-
-			<div class="main">	
-			
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
-				</p>
+			<div class="article-title">
+				<h2>Los Angeles, CA</h2>
 			</div>
+		</section>
+		<section id="screen2">
+			<article>
+				<div class="article-wrapper">	
+					<h2>Rio de Janeiro, Brazil</h2>		
+					<div class="img-div">
+						<%= image_tag("rio-beach-night.jpg", :class => 'img-l', :alt => "beach") %>
+						<%= image_tag("rio-sunset.jpg", :class => 'img-r', :alt => "sunset") %>
+					</div>	
+					<div class="para">				
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+						</p>
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+						</p>
+					</div>		
+				</div>
+			</article>
+		</section>
 
-			<footer>
-				<img class="footer_logo" src="../footer_logo.png">
-			</footer>
+		<section id="screen3">
+			<article>
+				<div class="article-title">
+					<h2>Belize</h2>
+				</div>
+				<div class="article-content">		
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+					</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+					</p>
+				</div>
+			</article>
+		</section>
+		<section id="screen4">
+			<article>
+				<div class="article-title">
+					<h2>Boulder, CO</h2>
+				</div>
+				<div class="article-content">		
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+					</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+					</p>
+				</div>
+			</article>
+		</section>
+		<section id="screen5">
+			<article>
+				<div class="article-title">
+					<h2>SanFrancisco, CA</h2>
+				</div>
+				<div class="article-content">		
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+					</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+					</p>
+				</div>
+			</article>
 
-	<%= yield %>
+			<div class="nav-wp-up"></div>
+
+		</section>
+
+		<section id="screen6">
+
+			<div class="nav-wp-down"></div> was "nav-wp"
+
+			<article>
+				<div class="article-title">
+					<h2>New York City</h2>
+				</div>
+				<div class="article-content">		
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+					</p>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatibus eveniet quibusdam temporibus doloremque ex odio corrupti, quos quas laboriosam iste aperiam perspiciatis ipsam. Perspiciatis pariatur suscipit, facere libero esse.
+					</p>
+				</div>
+			</article>
+		</section>
+
+			<section id="screen7">
+
+				<div class="waypoint-wrapper">
+					<footer>
+						<div class="footer-banner">
+							<ul>
+								<li><h1>1.4</h1>
+								</li>
+								<li><h5>one point four</h5>
+								</li>
+							</ul>
+						</div>	
+						<div class="footer-bar">
+							<ul>
+								<li><%= link_to 'HOME', root_path %>
+								</li>
+								<li><%= link_to 'ABOUT', about_path %>
+								</li>
+								<li><%= link_to 'LOGIN', login_path %>
+								</li>
+								<li><%= link_to 'SIGNUP', new_user_path %>
+								</li>
+							</ul>
+						</div>						
+					</footer>
+					<div class="stop-here"></div>
+				</div>				
+		</section>
+
+			<%= yield %>
+
 
 	</body>
 </html>

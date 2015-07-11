@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506215950) do
+ActiveRecord::Schema.define(version: 20150518213657) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "post"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150506215950) do
     t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "email"
   end
 
 end
